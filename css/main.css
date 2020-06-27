@@ -1,8 +1,14 @@
+html{
+	font-size: 16px;
+}
+
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	display: flex;
   	justify-content: center;
-  	align-items: center;
+	align-items: center;
+	font-size: 1em;
+	  
 }
 
 .container{
@@ -22,31 +28,25 @@ h4 {
 	color: black;
 	text-transform: uppercase;
 	font-weight: 700;
-}
-h1 {
-	font-size: 30px;
-}
-h2 {
-    font-size: 24px;
-}
-h3 {
-	font-size: 18px;
-}
-h4 {
-	font-size: 12px;
+	text-align: center;
 }
 
+
 p {
-	font-size: 14px;
+	font-size: 0.875em;
 	line-height: 21px;
     padding: 0 30px;
 }
 
+ul{
+	margin: 0;
+}
+
 /*The widths are in a percentage!*/
 header {
-	height: auto;
 	border-bottom: 3px solid #77a466;
-	margin: 0 auto;
+	text-align: center;
+	width: 100%;
 	display: flex;
   	justify-content: center;
 	align-items: center;
@@ -55,9 +55,11 @@ header {
 }
 
 header h1 {
-	
-	margin: 20px;
-	padding: 38px 20px 30px 20px;
+	font-size: 1.875em;
+	margin: 0;
+	padding: 38px 20px 20px 20px;
+	border-bottom: 3px solid #77a466;
+	width: 100%;
 }
 header h1 span {
 	color: #77a466;
@@ -65,23 +67,23 @@ header h1 span {
 
 header nav {
 	
-	padding: 0 46px 46px 46px;
-	display: flex;
-  	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
+	padding: 20px 0;
+	width: 100%;
+	
 }
 header nav ul {
+	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 14px;
-	padding: 20px 0px;
-	display: flex;
+	font-size: .875em;
+	padding: 10px 0;
+	list-style: none;
 }
+
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
@@ -90,68 +92,36 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	margin: 0 auto;
 	display: flex;
   	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	flex-flow: row wrap;
-	
 }
-
-.main-image {
-	height: auto;
 	
-}
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
 }
-
-.main-title {
-	height: auto;
 	
-}
 .main-title h3 {
 	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
+	font-size: 1.125em;
 }
+
 .main-title p {
 	padding: 0;
-	font-size: 16px;
-	line-height: 25px;
+	font-size: 1em;
+	line-height: 1.5625em;
 }
 
 .section-one,
 .section-two,
 .section-three {
 	
-	min-width: 250px;
-	height: auto;
-	
-	display: flex;
-  	justify-content: center;
-	align-items: top;
-	flex-flow: row wrap;
-}
-
-.section-one{
 	border-top: 1px solid #eee;
-}
-
-.section-one h4 {
-	padding: 10px 0;
-}
-
-.section-two {
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-}
-
-.section-two h4,
-.section-three h4 {
-	margin: 0 20px;
-	padding: 10px 30px;
+	width: 100%;
 }
 
 .menu {
@@ -165,30 +135,85 @@ header nav ul li a{
 
 .reviews {
 	color: #333;
-	font-size: 16px;
-	line-height: 21px;
+	font-size: 1em;
+	line-height: 1.3125em;
 }
 
 .address {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1em;
+	line-height: 1.5em;
 }
 
 /*The widths are in a percentage!*/
 footer {
-	height: auto;
 	border-top: 3px solid #eee;
-	margin: 0 auto;
-	
 	text-align: center;
+	width: 100%;
 	display: flex;
   	justify-content: center;
-  	align-items: center;
+	align-items: center;
+	flex-flow: row wrap;
+	  
 }
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 14px;
+	font-size: .875em;
 }
 
+@media only screen and (min-width:768px) {
+    /* Tablet styles here */
+ 
+	
+	.bottom-section{
+		justify-content: space-between;
+        align-items: flex-start;
+        border-top: 1px solid #eee;
+	}
+
+	
+
+	.section-one,
+	.section-two,
+	.section-three {
+		border-top: none;
+		flex-basis: 30%;
+	}
+
+	.section-two{
+		border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        padding: 0 20px;
+	}
+
+	
+}
+ 
+@media only screen and (min-width:1200px) {
+    /* Desktop styles here */
+ 
+
+
+header{
+	justify-content: space-between;
+}
+
+header h1{
+	width: 33%;
+	padding: 0px;
+	border-bottom: none;
+	text-align: left;
+}
+
+header nav{
+	width: 50%;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+}
